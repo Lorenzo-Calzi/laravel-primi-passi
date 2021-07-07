@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Routing\Route as RoutingRoute;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,28 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    /* return view('laravel'); */
 
-    $message = "Hello Word";
+    /* $message = "Hello";
+    $name = "Lorenzo Calzi"; */
+
+    /* return view('home', compact('message'), compact('name')); */
 
 
-    return view('home', compact('message'));
-});
+    
+    $data = [
+        'message' => "Hello",
+        'name' => 'Lorenzo',
+        'students' => [
+            'primo',
+            'secondo'
+        ]
+        ];
+
+    return view('home', compact('data'));
+    });
+    
+    
+    Route::get('test', function () {
+    return 'Route di Test';
+    });
+    
