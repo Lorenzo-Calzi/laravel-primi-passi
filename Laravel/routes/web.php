@@ -15,28 +15,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    /* $message = "Hello";
-    $name = "Lorenzo Calzi"; */
-
-    /* return view('home', compact('message'), compact('name')); */
-
-
-    
+ 
     $data = [
         'message' => "Hello",
         'name' => 'Lorenzo',
         'students' => [
-            'primo',
-            'secondo'
+            'Boolean',
+            'Carrers'
         ]
-        ];
+    ];
 
-    return view('home', compact('data'));
-    });
+    return view('home', $data);
+  
+});
     
     
-    Route::get('test', function () {
+Route::get('test', function () {
     return 'Route di Test';
-    });
+});
     

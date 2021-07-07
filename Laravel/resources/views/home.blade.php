@@ -81,14 +81,13 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <!-- <h4>{{$message}} {{$name}}</h4> -->
+                    <h4>{{$message}} {{$name}}</h4>
 
+                    <span style="display: block;">Student of</span>
                     @foreach($students as $student)
                         <span>{{$student}}</span>
                     @endforeach
                 </div>
-
-
             </div>
         </div>
     </body>
